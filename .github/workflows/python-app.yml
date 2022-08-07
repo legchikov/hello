@@ -32,12 +32,12 @@ jobs:
 
     - name: Test with pytest
       run: |
-        pytest
+        pytest --cov=src tests/
 
     - name: Python Linter
       uses: sunnysid3up/python-linter@master
       with:
         source: "src"
         mypy-options: "--ignore-missing-imports --show-error-codes"
-        pylint-options: "--rcfile=setup.cfg"
+        pylint-options: "--rcfile=setup.cfg "
         isort-options: "-w 100"
