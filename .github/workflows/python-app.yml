@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 permissions:
-  contents: read
+  contents: write-all
 
 jobs:
   build:
@@ -34,7 +34,8 @@ jobs:
       run: |
         pytest --cov=src tests/ > pytest-coverage.txt
 
-    - name: Test report
+    - name: pytest-coverage-commentator
+      uses: coroo/pytest-coverage-commentator@v1.0.2
       with:
         pytest-coverage: pytest-coverage.txt
 
