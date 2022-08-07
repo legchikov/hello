@@ -17,7 +17,7 @@ pytest --cov=src tests/ --cov-report html:reports
 
 # Run black (linter)
 ```
-black src
+black src/
 ```
 
 # Run isort
