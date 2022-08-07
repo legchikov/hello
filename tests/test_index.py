@@ -1,4 +1,3 @@
-from cProfile import run
 from src.hello.services.index import run_index
 
 
