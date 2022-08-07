@@ -34,8 +34,7 @@ jobs:
       run: |
         pytest --cov=src tests/ > pytest-coverage.txt
 
-    - name: pytest-coverage-commentator
-      uses: coroo/pytest-coverage-commentator@v1.0.2
+    - name: Test report
       with:
         pytest-coverage: pytest-coverage.txt
 
